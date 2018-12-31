@@ -1,0 +1,134 @@
+@font-face {
+	font-family: "retro";
+	src: url("../assets/fonts/retro.ttf");
+}
+
+body {
+	font-family: "retro";
+	font-size: 300%;
+	color: black;
+}
+
+span {
+	border-color: black !important;
+}
+
+#canvas-container {
+   width: 100%;
+   text-align:center;
+}
+
+canvas {
+	width: 1135.2px;
+	height: 600px;
+	display: inline;
+}
+
+.inspiration {
+	background-color: white;
+	color: white;
+}
+
+#end {
+	background-color: black;
+	color: black;
+}
+
+#statusBar {
+	margin: 0 auto;
+	margin-top: 5%;
+	width: 1135.2px;
+	font-size: 95%;
+}
+
+#messageBar {
+	margin: 0 auto;
+	width: 1135.2px;
+	font-size: 50%;
+}
+
+#pauseBar {
+	margin: 0 auto;
+	margin-top: 2.5%;
+	width: 1135.2px;
+	color: white;
+	font-size: 50%;
+	text-align: center;
+}
+
+#pauseName, #pauseMoney, #pauseArmor {
+	color: rgb(240, 40, 0);
+	font-size: 100%;
+}
+
+.items {
+	text-align: center;
+	font-size: 100%;
+}
+
+.selected {
+	color: rgb(240, 40, 0);
+}
+
+#messageName {
+	color: rgb(240, 40, 0);
+}
+
+#messageContentA {
+	color: white;
+}
+
+#messageContentB {
+	color: rgb(240, 40, 0);
+}
+
+#shopMenu {
+	margin: 0 auto;
+	margin-top: 2.5%;
+	width: 1135.2px;
+	text-align: center;
+}
+
+#shopBuy, #shopSell {
+	margin: 0 auto;
+	width: 1135.2px;
+	font-size: 50%;
+	text-align: center;
+}
+
+#shopBuyTitle, #shopSellTitle {
+	color: rgb(240, 40, 0);
+	font-size: 200%;
+	display: inline-block;
+   	position: relative;
+   	text-align: center;
+}
+
+.buyRow, .sellRow {
+	margin-top: 2%;
+}
+
+#itemMenu, #adviceMenu {
+	margin: 0 auto;
+	margin-top: 1%;
+	width: 1135.2px;
+	font-size: 50%;
+	text-align: center;
+}
+
+.itemMenus, .adviceMenus {
+	font-size: 200%;
+}
+
+#itemMenuName, #adviceMenuName {
+	color: rgb(240, 40, 0);
+	font-size: 200%;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+}
+
+#questionText {
+	color: rgb(240, 40, 0);
+	text-align: center;
+}

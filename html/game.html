@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Life</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/game.css">
+
+</head>
+<body style="background-color: black;">
+	<audio id="menuEnter">
+		<source src="../assets/sounds/menuEnter.wav" type="audio/wav">
+	</audio>
+
+	<audio id="walk">
+		<source src="../assets/sounds/walk.wav" type="audio/wav">
+	</audio>
+
+	<audio id="arenaMusic" loop>
+		<source src="../assets/sounds/music/BitShift.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="shopMusic" loop>
+		<source src="../assets/sounds/music/TownieLoop.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="buySuccess">
+		<source src="../assets/sounds/buySuccess.wav" type="audio/wav">
+	</audio>
+
+	<audio id="buyFailure">
+		<source src="../assets/sounds/buyFailure.wav" type="audio/wav">
+	</audio>
+
+	<audio id="heal">
+		<source src="../assets/sounds/heal.wav" type="audio/wav">
+	</audio>
+
+	<audio id="hit">
+		<source src="../assets/sounds/hit.wav" type="audio/wav">
+	</audio>
+
+	<audio id="doorShut">
+		<source src="../assets/sounds/doorShut.wav" type="audio/wav">
+	</audio>
+
+	<audio id="pressButton">
+		<source src="../assets/sounds/pressButton.wav" type="audio/wav">
+	</audio>
+
+	<div id="canvas-container">
+		<canvas id="screen"></canvas>
+	</div>
+
+	<div class="container-fluid" id="questionBox" style="display: none;">
+		<div class="row">
+			<div class="col" id="questionText">Question</div>
+		</div>
+	</div>
+
+	<div class="container-fluid" id="statusBar" style="display: none;">
+	    <div class="row">
+	        <div class="col-md-2.5" id="inspirationCounter">
+	            Inspiration:
+	        </div>
+
+	        <span class="borderclass">
+		        <div id="inspiration1" class="inspirationClass">
+		        	|||
+		        </div>
+	    	</span>
+
+	        <span class="borderclass">
+		        <div id="inspiration2" class="inspirationClass">
+		        	|||
+		        </div>
+		    </span>
+
+	        <span class="borderclass">
+		        <div id="inspiration3" class="inspirationClass">
+		        	|||
+		        </div>
+		    </span>
+
+	        <span class="borderclass">
+		        <div id="inspiration4" class="inspirationClass">
+		        	|||
+		        </div>
+		    </span>
+
+	        <span class="borderclass">
+		        <div id="inspiration5" class="inspirationClass">
+		        	|||
+		        </div>
+		    </span>
+
+	        <span class="borderclass">
+		        <div id="inspiration6" class="inspirationClass">
+		        	|||
+		        </div>
+		    </span>
+
+	        <span class="borderclass">
+		        <div id="inspiration7" class="inspirationClass">
+		        	|||
+		        </div>
+		    </span>
+
+	        <span class="borderclass">
+		        <div id="inspiration8" class="inspirationClass">
+		        	|||
+		        </div>
+		    </span>
+
+	        <span class="borderclass">
+		        <div id="inspiration9" class="inspirationClass">
+		        	|||
+		        </div>
+		    </span>
+
+	        <span class="borderclass">
+		        <div id="inspiration10" class="inspirationClass">
+		        	|||
+		        </div>
+		    </span>
+	    </div>
+	</div>
+
+	<div class="container-fluid" id="messageBar" style="display: none;">
+		<div class="row">
+			<p id="messageName">???</p>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-10" id="messageContent">
+				<span id="messageContentA">If you can see this, Joshua hasn't done his job correctly.</span> 
+				<span id="messageContentB">o</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid" id="pauseBar" style="display: none;">
+		<div class="row">
+			<div class="col" id="pauseName">Name</div>
+			<div class="col-6" id="pauseArmor">Armor: None</div>
+			<div class="col" id="pauseMoney">Money: $0</div>
+		</div>
+
+		<div class="row">
+			<div class="col items selected" id="item0">Item0</div>
+			<div class="col items" id="item1">Item1</div>
+			<div class="col items" id="item2">Item2</div>
+		</div>
+
+		<div class="row">
+			<div class="col items" id="item3">Item3</div>
+			<div class="col items" id="item4">Item4</div>
+			<div class="col items" id="item5">Item5</div>
+		</div>
+	</div>
+
+	<div class="container-fluid" id="shopMenu" style="display: none;">
+		<div class="row">
+			<div class="col selected" id="option0">Buy</div>
+			<div class="col" id="option1">Sell</div>
+		</div>
+
+		<div class="row">
+			<div class="col" id="option2">Talk</div>
+			<div class="col" id="option3">Leave</div>
+		</div>
+	</div>
+
+	<div class="container-fluid" id="shopBuy" style="display: none;">
+		<div class="row" id="shopBuyTitle">Buy</div>
+
+		<div class="row buyRow">
+			<div class="col buys selected" id="buy0">Buy0</div>
+			<div class="col buys" id="buy1">Buy1</div>
+			<div class="col buys" id="buy2">Buy2</div>
+		</div>
+
+		<div class="row buyRow">
+			<div class="col buys" id="buy3">Buy3</div>
+			<div class="col buys" id="buy4">Buy4</div>
+			<div class="col buys" id="buy5">Buy5</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid" id="shopSell" style="display: none;">
+		<div class="row" id="shopSellTitle">Sell</div>
+
+		<div class="row sellRow">
+			<div class="col sells selected" id="sell0">Sell0</div>
+			<div class="col sells" id="sell1">Sell1</div>
+			<div class="col sells" id="sell2">Sell2</div>
+		</div>
+
+		<div class="row sellRow">
+			<div class="col sells" id="sell3">Sell3</div>
+			<div class="col sells" id="sell4">Sell4</div>
+			<div class="col sells" id="sell5">Sell5</div>
+		</div>
+	</div>
+
+	<div class="container-fluid" id="itemMenu" style="display: none;">
+		<div class="row" id="itemMenuName">Item Menu</div>
+
+		<div class="row itemMenuRow">
+			<div class="col itemMenus selected" id="itemMenu0">Use</div>
+			<div class="col itemMenus" id="itemMenu1">Inspect</div>
+			<div class="col itemMenus" id="itemMenu2">Back</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid" id="adviceMenu" style="display: none;">
+		<div class="row" id="adviceMenuName">Advice</div>
+
+		<div class="row adviceRow">
+			<div class="col adviceMenus selected" id="adviceMenu0">Buy Advice</div>
+			<div class="col adviceMenus" id="adviceMenu1">Leave</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/game.js"></script>
+</body>
+</html>

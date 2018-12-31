@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pre-Survey</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+  		<link rel="stylesheet" href="../css/presurvey.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	</head>
+	<body>
+		<audio id="menuEnter">
+			<source src="../assets/sounds/menuEnter.wav" type="audio/wav">
+		</audio>
+
+		<div class="container" style="margin-top: 20%;">
+            <header>
+                <div class="container">
+                    <p id="surveyTitle" style="display: none;">Pre-Survey</p>
+                </div>
+            </header>
+        </div>
+
+		<div class="container">
+			<div class="col-xs-6" id="survey">
+				<div class="form-group" style="display: inline;" id="divMain">
+					<p class="col-xs-2" id="mainTitle">F . I . S . A . T</p>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextMain" name="nextMain">Disclose Yourself</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divName">
+					<label for="name" class="col-xs-2">What is Your Name?</label>
+
+					<div class="col-xs-10">
+						<input type="text" class="form-control" id="name" name="name" placeholder="Your Name Here">
+					</div>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextName" name="nextName">Next</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divGender">
+					<label for="gender" class="col-xs-2">What is Your Gender</label>
+
+					<select class="form-control form-control-lg" id="gender">
+						<option>Male</option>
+						<option>Female</option>
+						<option>Not cis-gendered</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextGender" name="nextGender">Next</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divSexuality">
+					<label for="sexuality" class="col-xs-2">What is Your Sexuality</label>
+
+					<select class="form-control form-control-lg" id="sexuality">
+						<option>Straight</option>
+						<option>Not straight</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextSexuality" name="nextSexuality">Next</button>
+				</div>
+
+
+				<div class="form-group" style="display: none;" id="divDisabilities">
+					<label for="disabiliites" class="col-xs-2">Do You Have Any Disabilities?</label>
+
+					<select class="form-control form-control-lg" id="disabilities">
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextDisabilities" name="nextDisabilities">Next</button>
+				</div>
+
+
+				<div class="form-group" style="display: none;" id="divEducation">
+					<label for="education" class="col-xs-2">Are You College Educated?</label>
+
+					<select class="form-control form-control-lg" id="education">
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextEducation" name="nextEducation">Next</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divRace">
+					<label for="race" class="col-xs-2">What is Your Race/Ethinicty?</label>
+
+					<select class="form-control form-control-lg" id="race">
+						<option>White</option>
+						<option>Non-White/Hispanic/Native American/etc.</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextRace" name="nextRace">Next</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divPassing">
+					<label for="passing" class="col-xs-2">Do You Look Like the Race You Identify With?</label>
+
+					<select class="form-control form-control-lg" id="passing">
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextPassing" name="nextPassing">Next</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divFaith">
+					<label for="faith" class="col-xs-2">Are You a Christian?</label>
+
+					<select class="form-control form-control-lg" id="faith">
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextFaith" name="nextFaith">Next</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divCitizenship">
+					<label for="citizenship" class="col-xs-2">Were You Born in a First-World Country?</label>
+
+					<select class="form-control form-control-lg" id="citizenship">
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextCitizenship" name="nextCitizenship">Next</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divIncome">
+					<label for="income" class="col-xs-2">How Much Money Do Your Parents Make?</label>
+
+					<select class="form-control form-control-lg" id="income">
+						<option>Over $150,000</option>
+						<option>Between $150,000 and $50,000</option>
+						<option>Less than $50,000</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextIncome" name="nextIncome">Next</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divParents">
+					<label for="parentalLove" class="col-xs-2">Do Your Parents Love Eachother?</label>
+
+					<select class="form-control form-control-lg" id="parents">
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextParents" name="nextParents">Next</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divSelfIncome">
+					<label for="selfIncome" class="col-xs-2">How Much Money Do You Make?</label>
+
+					<select class="form-control form-control-lg" id="selfIncome">
+						<option>Over $150,000</option>
+						<option>Between $150,000 and $50,000</option>
+						<option>Less than $50,000</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextSelfIncome" name="nextSelfIncome">Next</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divSelf">
+					<label for="selfLove" class="col-xs-2">Do You Love Yourself?</label>
+
+					<select class="form-control form-control-lg" id="selfLove">
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="nextSelf" name="nextSelf">Next</button>
+				</div>
+
+				<div class="form-group" style="display: none;" id="divLying">
+					<label for="lying" class="col-xs-2">Are You Lying?</label>
+
+					<select class="form-control form-control-lg" id="lying">
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="beginLife" name="beginLife">Begin Your Life</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/presurvey.js"></script>
+	</body>
+</html>

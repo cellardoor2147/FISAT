@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Post-Survey</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+  		<link rel="stylesheet" href="../css/postsurvey.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	</head>
+	<body>
+		<audio id="menuEnter">
+			<source src="../assets/sounds/menuEnter.wav" type="audio/wav">
+		</audio>
+
+		<div id="titleDiv">
+			<p id="title">Post-Survey</p>
+		</div>
+
+		<div id="survey" style="display: block;">
+			<div class="form-group" style="display: block;" id="divName">
+				<p class="col-xs-2" id="name">
+					<span id="nameTitle" class="titles">Name:</span>
+					<span id="nameValue" class="values">None</span>
+				</p>
+
+				<p class="col-xs-2" id="education">
+					<span id="educationTitle" class="titles">Education:</span>
+					<span id="educationValue" class="values">None</span>
+				</p>
+
+				<p class="col-xs-2" id="career">
+					<span id="careerTitle" class="titles">Career:</span>
+					<span id="careerValue" class="values">None</span>
+				</p>
+
+				<p class="col-xs-2" id="income">
+					<span id="incomeTitle" class="titles">Income:</span>
+					<span id="incomeValue" class="values">0</span>
+				</p>
+
+				<div id="buttons">
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="children" name="children">See How Your Children Fair</button>
+					<button type="button" class="btn btn-dark btn-lg btn-block" id="endIt" name="endIt">End It</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/postsurvey.js"></script>
+	</body>
+</html>

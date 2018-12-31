@@ -1,0 +1,48 @@
+@font-face {
+	font-family: "retro";
+	src: url("../assets/fonts/retro.ttf");
+}
+
+body {
+	background: black !important; 
+	color: white; 
+	font-family: retro;
+	text-align: center;
+	font-size: 250%;
+}
+
+p {
+	margin-top: 2%;
+	background-color: black; 
+	font-size: 75%; 
+	color: rgb(240, 40, 0);
+	text-align: left;
+}
+
+#title {
+	font-size: 150%;
+	margin-top: 3%;
+	margin-bottom: 5%;
+	text-align: center;
+}
+
+.titles {
+	color: rgb(240, 40, 0);
+	border-style: none;
+}
+
+.values {
+	color: white;
+	float: right;
+	border-style: none;
+}
+
+.btn {
+	background-color: rgb(240, 40, 0) !important;
+	color: white;
+	margin-top: 7%;
+}
+
+button {
+	margin-bottom: 4%
+}
